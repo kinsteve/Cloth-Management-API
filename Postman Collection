@@ -1,0 +1,210 @@
+{
+   "info": {
+      "_postman_id": "b7711317-5def-44bd-8e5e-0b26eb3e557a",
+      "name": "Cloth Management",
+      "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+   },
+   "item": [
+      {
+         "name": "Create User",
+         "id": "655f5ca2-d3dd-4490-a1dd-e2b8c4a5eabb",
+         "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+               "mode": "raw",
+               "raw": "{\r\n    \"name\":\"Anonymous\",\r\n    \"email\":\"hidden@gmail.com\",\r\n    \"password\":\"asdfghjk\",\r\n    \"age\":\"45\"\r\n}",
+               "options": {
+                  "raw": {
+                     "language": "json"
+                  }
+               }
+            },
+            "url": "{{url}}/users"
+         },
+         "response": []
+      },
+      {
+         "name": "Login Users",
+         "id": "9912f5a4-cccd-454e-81ef-f80d16bd8619",
+         "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+               "mode": "raw",
+               "raw": "{\r\n    \"email\":\"hidden@gmail.com\",\r\n    \"password\":\"asdfghjk\"\r\n}",
+               "options": {
+                  "raw": {
+                     "language": "json"
+                  }
+               }
+            },
+            "url": "{{url}}/users/login"
+         },
+         "response": []
+      },
+      {
+         "name": "LogOut User",
+         "id": "7ba67f8e-7be4-4e69-87a7-5619d0f7ef12",
+         "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{url}}/users/logout"
+         },
+         "response": []
+      },
+      {
+         "name": "Read Profile",
+         "id": "843f2225-dc0f-40bb-9009-a6620ee65441",
+         "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{url}}/users/me"
+         },
+         "response": []
+      },
+      {
+         "name": "Update User",
+         "id": "7d3900f3-cf07-4c0a-a8cf-c014457840d9",
+         "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+               "mode": "raw",
+               "raw": "{\r\n    \"name\":\"Krishnay Mudgal\"\r\n}",
+               "options": {
+                  "raw": {
+                     "language": "json"
+                  }
+               }
+            },
+            "url": "{{url}}/users/me"
+         },
+         "response": []
+      },
+      {
+         "name": "Delete User",
+         "id": "15ffd301-5be4-43e7-b340-607cf59fa207",
+         "request": {
+            "auth": {
+               "type": "bearer",
+               "bearer": {
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzIyYjNhYTgwYjVlZTViNjQ5MGMzZGYiLCJpYXQiOjE2NjMyMzI2NzZ9.6NQJPhtR4UpzKdd_jz6HCUIrJ7qjl-B6QEhoBT5Drzw"
+               }
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": "{{url}}/users/me"
+         },
+         "response": []
+      },
+      {
+         "name": "Create Cloth",
+         "id": "946b9ed3-9d3b-42d6-a1c7-ee2fd207d81f",
+         "request": {
+            "auth": {
+               "type": "bearer",
+               "bearer": {
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzIyYjNhYTgwYjVlZTViNjQ5MGMzZGYiLCJpYXQiOjE2NjMyMzI2NzZ9.6NQJPhtR4UpzKdd_jz6HCUIrJ7qjl-B6QEhoBT5Drzw"
+               }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+               "mode": "raw",
+               "raw": "{\r\n    \"description\":\"This is a denim jeans of blue color\",\r\n    \"price\":\"3200\",\r\n    \"owner\":\"6322b3aa80b5ee5b6490c3df\"\r\n}",
+               "options": {
+                  "raw": {
+                     "language": "json"
+                  }
+               }
+            },
+            "url": "{{url}}/cloths"
+         },
+         "response": []
+      },
+      {
+         "name": "Read Cloths",
+         "id": "fffa6fbd-3592-4138-8045-a0d96df94190",
+         "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{url}}/cloths"
+         },
+         "response": []
+      },
+      {
+         "name": "Read Cloth by Id",
+         "id": "a16f0ad8-7464-4413-86ee-2d6daea974dd",
+         "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{url}}/cloths/6322eaba91dc3156b4ccefbc"
+         },
+         "response": []
+      },
+      {
+         "name": "Update Cloth",
+         "id": "1ac2ad61-ad9e-48d7-b23d-885d49a4e876",
+         "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+               "mode": "raw",
+               "raw": "{\r\n    \"price\":\"2000\"\r\n}",
+               "options": {
+                  "raw": {
+                     "language": "json"
+                  }
+               }
+            },
+            "url": "{{url}}/cloths/6322eaba91dc3156b4ccefbc"
+         },
+         "response": []
+      },
+      {
+         "name": "Delete Cloth",
+         "id": "03ce6217-44fd-4ab8-a659-a770eb196bde",
+         "request": {
+            "auth": {
+               "type": "bearer",
+               "bearer": {
+                  "token": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzIzM2UzZmIxZDBhMjI2NmM3Y2FkMGEiLCJpYXQiOjE2NjMyNTQxMTl9.XEkXxEcyrFkUgjDbxm8XljMv8UJM0LatSRp1au1tyCg\""
+               }
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": "{{url}}/cloths/6323449ab1d0a2266c7cad16"
+         },
+         "response": []
+      }
+   ],
+   "auth": {
+      "type": "bearer",
+      "bearer": {
+         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzIyYjNhYTgwYjVlZTViNjQ5MGMzZGYiLCJpYXQiOjE2NjMyMzI0MzR9.ldwWI-DIbaSelmkh_AHoKQmDUpyOdd8TbAmYpivBGLw"
+      }
+   },
+   "event": [
+      {
+         "listen": "prerequest",
+         "script": {
+            "id": "97526446-ec48-4d98-8478-b52526a8355f",
+            "type": "text/javascript",
+            "exec": [
+               ""
+            ]
+         }
+      },
+      {
+         "listen": "test",
+         "script": {
+            "id": "5d216da3-5b53-45e9-a93e-e2a745c8f22b",
+            "type": "text/javascript",
+            "exec": [
+               ""
+            ]
+         }
+      }
+   ]
+}
